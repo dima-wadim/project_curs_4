@@ -7,7 +7,7 @@ API_KEY = os.getenv("API_KEY_SJ")
 
 class Api(ABC):
     """
-    Класс для работы с API сайтов с вакансиями
+    Создаем класс для работы с API сайтов с вакансиями
     """
 
     @abstractmethod
@@ -16,7 +16,9 @@ class Api(ABC):
 
 
 class ApiHH(Api):
-
+    """
+    Создаем класс для работы с API HH.ru
+    """
     def get_vacancies(self, vacancy):
         hh_dict = {}
         for page in range(0, 3):
@@ -31,7 +33,9 @@ class ApiHH(Api):
 
 
 class ApiSuperJob(Api):
-
+    """
+    Создаем класс для работы с API Superjob
+    """
     def get_vacancies(self, vacancy):
         params = {
             "keyword": vacancy
