@@ -69,7 +69,7 @@ def user_interaction(json_saver: JSONSaver):
     hh_vacancies = ApiHH()
     superjob_vacancies = ApiSuperJob()
     while True:
-        user_input = input("Добрый день!С какой платформы хотите получить вакансии: 1 - HeadHunter, 2 - SuperJob, 3 - обе платформы: ")
+        user_input = input("Здравствуйте. С какого сайта хотите получить вакансии:\n1 - с сайта HH.ru, \n2 - c сайта SuperJob, \n3 - с HH.ru и SuperJob\n")
         search_word = input("Введите ключевое слово для поиска: ")
         if user_input == "1":
             raw_hh_data = hh_vacancies.get_vacancies(search_word)["items"]
