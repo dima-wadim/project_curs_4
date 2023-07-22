@@ -3,6 +3,9 @@ import json
 
 
 class JSONAbc(ABC):
+    """
+    Создаем абстрактный класс для работы с вакансиями
+    """
 
     @abstractmethod
     def add_vacancy(self, vacancy):
